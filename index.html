@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Vishv Publication - Genuine handwriting projects from home.">
+    <title>Vishv Publication - Handwriting Work From Home</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    // REPLACE 'YOUR_PIXEL_ID' WITH YOUR EXACT META PIXEL NUMBER
+    fbq('init', '4459251767736573'); 
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=4459251767736573&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        :root {
+            var(--primary-dark): #0B1120;
+            --primary: #1E293B;
+            --gold: #D97706;
+            --gold-hover: #B45309;
+            --gold-light: #FFF7ED;
+            --bg-body: #F8FAFC;
+            --white: #FFFFFF;
+            --text-dark: #334155;
+            --text-light: #64748B;
+            --success: #10B981;
+            
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 8px 15px rgba(0,0,0,0.08);
+            --shadow-lg: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-dark);
+            line-height: 1.6;
+            font-size: 13px; /* Clean, small mobile font */
+            overflow-x: hidden;
+            padding-bottom: 75px;
+        }
+
+        @media (min-width: 992px) { body { font-size: 14px; } }
+
+        a { text-decoration: none; transition: 0.3s; }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        .container {
+            width: 100%; max-width: 1100px;
+            margin: 0 auto; padding: 0 20px;
+        }
+
+        section { padding: 50px 0; overflow: hidden; }
+        @media (min-width: 992px) { section { padding: 80px 0; } }
+
+        /* --- BUTTONS --- */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            background: linear-gradient(135deg, var(--gold), var(--gold-hover));
+            color: var(--white);
+            padding: 10px 20px; border-radius: 6px;
+            font-weight: 700; font-size: 0.85rem; border: none; cursor: pointer;
+            box-shadow: 0 4px 10px rgba(217, 119, 6, 0.3); transition: 0.3s ease;
+            text-align: center;
+        }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(217, 119, 6, 0.4); }
+
+        .btn-telegram {
+            background: #0088cc !important;
+            box-shadow: 0 4px 10px rgba(0, 136, 204, 0.3) !important;
+            color: #ffffff;
+            width: 100%;
+        }
+
+        /* --- SCROLLING ANIMATED CTA --- */
+        @keyframes pulse-btn {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 136, 204, 0.7); }
+            70% { transform: scale(1.03); box-shadow: 0 0 0 12px rgba(0, 136, 204, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 136, 204, 0); }
+        }
+        .scroll-animated-cta {
+            position: fixed; bottom: 0; left: 0; width: 100%;
+            background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(5px);
+            padding: 12px 20px; box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+            z-index: 1000; display: flex; justify-content: center;
+        }
+        .scroll-animated-cta .btn {
+            animation: pulse-btn 2s infinite;
+            max-width: 400px;
+            font-size: 0.9rem;
+            padding: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* --- HEADER & MOBILE MENU --- */
+        header {
+            background: var(--white); height: 65px;
+            position: sticky; top: 0; z-index: 999;
+            box-shadow: var(--shadow-sm); display: flex; align-items: center;
+        }
+
+        .header-content {
+            display: flex; justify-content: space-between; align-items: center; width: 100%;
+        }
+
+        .logo-box { display: flex; align-items: center; gap: 8px; }
+        .logo-box img { height: 35px; border-radius: 6px; }
+        .brand-name { color: #0B1120; font-size: 1.1rem; font-weight: 800; line-height: 1.1; }
+        .brand-sub { color: var(--gold); font-size: 0.65rem; font-weight: 700; text-transform: uppercase; }
+
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
+        .nav-links a { color: var(--text-dark); font-weight: 600; font-size: 0.85rem; }
+        .nav-links a:hover { color: var(--gold); }
+        
+        .mobile-menu-btn {
+            display: none; font-size: 1.5rem; color: #0B1120;
+            background: none; border: none; cursor: pointer;
+        }
+
+        @media (max-width: 991px) {
+            .mobile-menu-btn { display: block; }
+            .nav-links {
+                display: none; position: absolute; top: 65px; left: 0; right: 0;
+                background: var(--white); flex-direction: column; padding: 20px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-top: 1px solid #eee;
+            }
+            .nav-links.active { display: flex; }
+            .desktop-btn { display: none; }
+        }
+
+        /* --- HERO SECTION --- */
+        .hero { background: #0B1120; color: var(--white); padding: 40px 0; position: relative; }
+        
+        .hero::before {
+            content: ''; position: absolute; top: 0; right: 0;
+            width: 400px; height: 400px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(217, 119, 6, 0.1) 0%, transparent 70%);
+            z-index: 0;
+        }
+
+        .hero-grid {
+            display: grid; grid-template-columns: 1fr; gap: 30px; align-items: center; position: relative; z-index: 1;
+        }
+        @media (min-width: 992px) { .hero-grid { grid-template-columns: 1fr 1fr; gap: 50px; } }
+
+        .trust-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 5px 12px; border-radius: 50px; font-size: 0.7rem; font-weight: 600;
+            color: var(--white); margin-bottom: 15px; letter-spacing: 0.5px;
+        }
+
+        .live-dot {
+            width: 6px; height: 6px; background-color: var(--success); border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { box-shadow: 0 0 0 5px rgba(16, 185, 129, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+
+        .hero h1 { font-size: clamp(1.6rem, 5vw, 2.8rem); font-weight: 800; line-height: 1.15; margin-bottom: 12px; }
+        .hero p { font-size: 0.9rem; color: #CBD5E1; margin-bottom: 20px; max-width: 500px; }
+
+        .hero-image-box {
+            background: rgba(255, 255, 255, 0.05); padding: 8px; border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1);
+            margin: 0 auto; max-width: 320px; width: 100%;
+        }
+        @media (min-width: 992px) { .hero-image-box { max-width: 100%; } }
+        .hero-image-box img { width: 100%; border-radius: 8px; object-fit: contain; }
+
+        /* --- STATS COUNTERS --- */
+        .stats-wrapper {
+            background: var(--white); border-radius: 12px; padding: 20px;
+            box-shadow: var(--shadow-md); margin-top: -30px; position: relative; z-index: 10;
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; text-align: center;
+        }
+        @media (min-width: 768px) { .stats-wrapper { grid-template-columns: repeat(4, 1fr); padding: 25px; margin-top: -40px; } }
+        
+        .stat-item h4 { font-size: 1.6rem; color: var(--gold); font-weight: 800; line-height: 1; }
+        .stat-item p { font-size: 0.75rem; color: var(--text-light); text-transform: uppercase; font-weight: 600; margin-top: 4px; }
+
+        /* --- SECTION HEADERS --- */
+        .section-title { text-align: center; font-size: 1.5rem; color: #0B1120; font-weight: 800; margin-bottom: 5px; }
+        .section-subtitle { text-align: center; font-size: 0.85rem; color: var(--text-light); margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;}
+
+        /* --- TRUST CARDS & BENTO --- */
+        .grid-3 { display: grid; grid-template-columns: 1fr; gap: 15px; }
+        @media (min-width: 768px) { .grid-3 { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
+
+        .card {
+            background: var(--white); padding: 25px 20px; border-radius: 12px; text-align: center;
+            border: 1px solid #E2E8F0; box-shadow: var(--shadow-sm); transition: 0.3s;
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--gold); }
+        .card-icon { font-size: 2rem; margin-bottom: 12px; }
+        .card h3 { color: #0B1120; font-size: 1.1rem; margin-bottom: 8px; }
+        .card p { color: var(--text-light); font-size: 0.85rem; }
+
+        /* --- LIVE RECENT PAYOUTS CHART --- */
+        .payout-container {
+            background: var(--white); border: 1px solid #E2E8F0; border-radius: 12px;
+            box-shadow: var(--shadow-md); max-width: 700px; margin: 0 auto;
+            position: relative; overflow: hidden; height: 350px;
+        }
+        .payout-container::before, .payout-container::after {
+            content: ''; position: absolute; left: 0; right: 0; height: 40px; z-index: 2; pointer-events: none;
+        }
+        .payout-container::before { top: 0; background: linear-gradient(to bottom, var(--white), transparent); }
+        .payout-container::after { bottom: 0; background: linear-gradient(to top, var(--white), transparent); }
+        
+        .payout-track { animation: scroll-vertical 25s linear infinite; }
+        .payout-track:hover { animation-play-state: paused; }
+        
+        @keyframes scroll-vertical {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+
+        .chart-row {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 12px 20px; border-bottom: 1px solid #F1F5F9; font-size: 0.85rem;
+        }
+        .user-info { display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--text-dark); }
+        .user-icon { width: 28px; height: 28px; background: var(--gold-light); color: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;}
+        .amt { font-weight: 800; color: #0B1120; }
+        .status { color: var(--success); font-size: 0.7rem; font-weight: 700; display: flex; align-items: center; gap: 4px; justify-content: flex-end;}
+
+        /* --- NEW USER GUIDE --- */
+        .flow-chart { display: flex; flex-direction: column; gap: 12px; max-width: 600px; margin: 0 auto; }
+        .flow-step {
+            background: var(--white); border: 1px solid #E2E8F0; padding: 15px;
+            border-radius: 8px; display: flex; align-items: center; gap: 15px;
+            box-shadow: var(--shadow-sm); position: relative;
+        }
+        .flow-step::after {
+            content: '↓'; position: absolute; bottom: -16px; left: 50%;
+            transform: translateX(-50%); color: var(--gold); font-weight: bold; font-size: 1rem;
+        }
+        .flow-step:last-child::after { display: none; }
+        
+        .step-num {
+            background: linear-gradient(135deg, var(--gold), var(--gold-hover)); color: var(--white);
+            width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 0.9rem; flex-shrink: 0; box-shadow: 0 4px 8px rgba(217, 119, 6, 0.3);
+        }
+        .step-text h4 { font-size: 0.95rem; color: #0B1120; margin-bottom: 2px; }
+        .step-text p { font-size: 0.8rem; color: var(--text-light); }
+
+        @media (min-width: 768px) {
+            .flow-chart { flex-direction: row; max-width: 100%; justify-content: space-between; gap: 15px;}
+            .flow-step { flex-direction: column; text-align: center; flex: 1; padding: 20px 10px; }
+            .flow-step::after {
+                content: '→'; bottom: auto; right: -15px; top: 50%;
+                left: auto; transform: translateY(-50%);
+            }
+        }
+
+        /* --- PRICING PLANS --- */
+        .plan-card {
+            background: var(--white); padding: 30px 20px; border-radius: 12px;
+            text-align: center; border: 1px solid #E2E8F0; transition: 0.3s;
+        }
+        .plan-card:hover { box-shadow: var(--shadow-md); }
+        .plan-card.popular { border: 2px solid var(--gold); position: relative; box-shadow: var(--shadow-md); }
+        @media (min-width: 992px) { .plan-card.popular { transform: scale(1.05); } }
+        
+        .badge {
+            background: #0B1120; color: var(--white); padding: 4px 12px;
+            border-radius: 50px; font-size: 0.7rem; font-weight: 700; display: inline-block; margin-bottom: 12px;
+        }
+        .plan-card.popular .badge { background: var(--gold); }
+        .plan-title { font-size: 1rem; color: var(--text-dark); font-weight: 600; margin-bottom: 5px; }
+        .plan-pages { font-size: 2rem; font-weight: 800; color: #0B1120; margin-bottom: 15px; }
+        
+        .plan-list { margin-bottom: 20px; text-align: left; }
+        .plan-item {
+            display: flex; justify-content: space-between; padding: 8px 0;
+            border-bottom: 1px dashed #E2E8F0; font-size: 0.85rem;
+        }
+        .plan-item span:last-child { font-weight: 700; color: var(--gold); }
+
+        /* --- FAQ --- */
+        .faq-box { max-width: 700px; margin: 0 auto; }
+        .faq-item { background: var(--white); border: 1px solid #E2E8F0; border-radius: 8px; margin-bottom: 10px; }
+        .faq-q {
+            padding: 15px 18px; font-size: 0.9rem; font-weight: 600; color: #0B1120;
+            cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+        }
+        .faq-icon { color: var(--gold); font-size: 1.2rem; transition: 0.3s; }
+        .faq-item.active .faq-icon { transform: rotate(45deg); }
+        .faq-a {
+            padding: 0 18px; max-height: 0; overflow: hidden; transition: 0.3s ease-out;
+            color: var(--text-light); font-size: 0.85rem;
+        }
+        .faq-item.active .faq-a { max-height: 300px; padding-bottom: 15px; }
+
+        /* --- FOOTER --- */
+        footer { background: #0B1120; color: #94A3B8; padding: 50px 0 20px; }
+        .footer-grid {
+            display: grid; grid-template-columns: 1fr; gap: 30px; margin-bottom: 30px;
+        }
+        @media (min-width: 768px) { .footer-grid { grid-template-columns: repeat(4, 1fr); } }
+        .footer-col h3 { color: var(--white); font-size: 1.1rem; margin-bottom: 15px; font-weight: 700; }
+        .footer-col p, .footer-col a { color: #94A3B8; font-size: 0.85rem; margin-bottom: 10px; display: block; }
+        .footer-col a:hover { color: var(--gold); }
+        .footer-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+        .f-badge {
+            background: rgba(255,255,255,0.05); padding: 4px 8px;
+            border-radius: 4px; font-size: 0.75rem; border: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;
+            text-align: center; font-size: 0.8rem;
+        }
+
+        /* --- SCROLL ANIMATIONS --- */
+        .reveal { opacity: 0; transform: translateY(20px); transition: 0.6s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo-box">
+                <img src="images/logo.jpeg" alt="Vishv Publication Logo" onerror="this.src='https://placehold.co/100x100/1E293B/D97706?text=VP'">
+                <div>
+                    <div class="brand-name">Vishv Publication</div>
+                    <div class="brand-sub">Trusted Handwriting Work</div>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="menuBtn">☰</button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#guide">How to Start</a>
+                <a href="#pricing">Salary Plans</a>
+                <a href="#faq">FAQ</a>
+                <div style="display: flex; gap: 10px;">
+                    <a href="https://t.me/+7gqm2hL2UnY0M2Fl" target="_blank" class="btn btn-telegram desktop-btn" onclick="fbq('track', 'Contact');">Join Telegram</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text reveal">
+                <div class="trust-badge">
+                    <span class="live-dot"></span> MSME Approved MSME • Active
+                </div>
+
+                <h1>Earn Money From Home by Handwriting</h1>
+                <p>Turn your good handwriting into a steady income. This is a simple, genuine work-from-home opportunity perfect for students, housewives, and anyone looking for extra money.</p>
+
+                <div style="margin-top: 20px; max-width: 300px;">
+                    <a href="https://t.me/+7gqm2hL2UnY0M2Fl" target="_blank" class="btn btn-telegram" onclick="fbq('track', 'Contact');">
+                        Join Our Telegram Channel
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image-box reveal delay-1">
+                <img src="images/slide1.jpeg" alt="Handwriting Example" onerror="this.src='https://placehold.co/600x450/F8FAFC/1E293B?text=Handwriting+Sample'">
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="stats-wrapper reveal delay-2">
+            <div class="stat-item">
+                <h4 class="counter" data-target="2500">0</h4>
+                <p>Active Workers</p>
+            </div>
+            <div class="stat-item">
+                <h4 class="counter" data-target="18000">0</h4>
+                <p>Projects Done</p>
+            </div>
+            <div class="stat-item">
+                <h4>₹<span class="counter" data-target="75">0</span>K</h4>
+                <p>Avg Monthly Salary</p>
+            </div>
+            <div class="stat-item">
+                <h4><span class="counter" data-target="100">0</span>%</h4>
+                <p>Genuine Payouts</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="container" style="padding-top: 60px;">
+        <div class="section-title reveal">Is This Genuine?</div>
+        <div class="section-subtitle reveal">Yes. We provide safe and reliable work for everyone.</div>
+        
+        <div class="grid-3">
+            <div class="card reveal">
+                <div class="card-icon">🏛️</div>
+                <h3>MSME Approved</h3>
+                <p>We are a fully registered MSME company working safely and transparently since 2018.</p>
+            </div>
+            <div class="card reveal delay-1">
+                <div class="card-icon">✍️</div>
+                <h3>Very Easy Work</h3>
+                <p>Just copy text from your phone to paper. You do not need any special computer skills.</p>
+            </div>
+            <div class="card reveal delay-2">
+                <div class="card-icon">🏦</div>
+                <h3>Direct Bank Payment</h3>
+                <p>Your earned salary is sent directly to your bank account every single week. Safe and fast.</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--gold-light);">
+        <div class="container">
+            <div class="section-title reveal">Recent Salary Transfers</div>
+            <div class="section-subtitle reveal">Live tracking of our latest weekly payments to workers.</div>
+            
+            <div class="payout-container reveal delay-1">
+                <div class="payout-track" id="payoutTrack">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="guide">
+        <div class="container" style="padding-top: 60px;">
+            <div class="section-title reveal">New User Guide</div>
+            <div class="section-subtitle reveal">Follow this simple step-by-step chart to get your first payment.</div>
+            
+            <div class="flow-chart">
+                <div class="flow-step reveal">
+                    <div class="step-num">1</div>
+                    <div class="step-text">
+                        <h4>Join Channel</h4>
+                        <p>Click our link to join the official Telegram channel.</p>
+                    </div>
+                </div>
+                <div class="flow-step reveal delay-1">
+                    <div class="step-num">2</div>
+                    <div class="step-text">
+                        <h4>Register</h4>
+                        <p>Pay the simple fee to get your verified ID.</p>
+                    </div>
+                </div>
+                <div class="flow-step reveal delay-2">
+                    <div class="step-num">3</div>
+                    <div class="step-text">
+                        <h4>Write Work</h4>
+                        <p>Copy the PDF files onto paper neatly.</p>
+                    </div>
+                </div>
+                <div class="flow-step reveal delay-1">
+                    <div class="step-num">4</div>
+                    <div class="step-text">
+                        <h4>Send Photo</h4>
+                        <p>Send clear photos of your written pages.</p>
+                    </div>
+                </div>
+                <div class="flow-step reveal">
+                    <div class="step-num">5</div>
+                    <div class="step-text">
+                        <h4>Get Paid</h4>
+                        <p>Salary arrives directly in your bank account!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" style="background: #F1F5F9;">
+        <div class="container">
+            <div class="section-title reveal">Salary Plans</div>
+            <div class="section-subtitle reveal">Choose a plan based on how many pages you can write daily.</div>
+            
+            <div class="grid-3">
+                <div class="plan-card reveal">
+                    <div class="badge">BASIC</div>
+                    <div class="plan-title">Starter Plan</div>
+                    <div class="plan-pages">50 Pages</div>
+                    <div class="plan-list">
+                        <div class="plan-item"><span>Daily Earning:</span> <span>₹3,000+</span></div>
+                        <div class="plan-item"><span>Weekly Earning:</span> <span>₹18,000+</span></div>
+                        <div class="plan-item"><span>Monthly Earning:</span> <span>₹72,000+</span></div>
+                    </div>
+                    <a href="https://t.me/+7gqm2hL2UnY0M2Fl" target="_blank" class="btn btn-telegram" onclick="fbq('track', 'Contact');">Select via Telegram</a>
+                </div>
+
+                <div class="plan-card popular reveal delay-1">
+                    <div class="badge">MOST POPULAR</div>
+                    <div class="plan-title">Standard Plan</div>
+                    <div class="plan-pages">90 Pages</div>
+                    <div class="plan-list">
+                        <div class="plan-item"><span>Daily Earning:</span> <span>₹5,000+</span></div>
+                        <div class="plan-item"><span>Weekly Earning:</span> <span>₹30,000+</span></div>
+                        <div class="plan-item"><span>Monthly Earning:</span> <span>₹1,20,000+</span></div>
+                    </div>
+                    <a href="https://t.me/+7gqm2hL2UnY0M2Fl" target="_blank" class="btn btn-telegram" onclick="fbq('track', 'Contact');">Select via Telegram</a>
+                </div>
+
+                <div class="plan-card reveal delay-2">
+                    <div class="badge">EXPERT</div>
+                    <div class="plan-title">Premium Plan</div>
+                    <div class="plan-pages">120 Pages</div>
+                    <div class="plan-list">
+                        <div class="plan-item"><span>Daily Earning:</span> <span>₹7,000+</span></div>
+                        <div class="plan-item"><span>Weekly Earning:</span> <span>₹50,000+</span></div>
+                        <div class="plan-item"><span>Monthly Earning:</span> <span>₹2,00,000+</span></div>
+                    </div>
+                    <a href="https://t.me/+7gqm2hL2UnY0M2Fl" target="_blank" class="btn btn-telegram" onclick="fbq('track', 'Contact');">Select via Telegram</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="container" style="padding-bottom: 60px;">
+        <div class="section-title reveal">Questions People Ask</div>
+        <div class="section-subtitle reveal">Clear answers to help you start your work without confusion.</div>
+        
+        <div class="faq-box reveal delay-1">
+            <div class="faq-item">
+                <div class="faq-q">Do I have to pay a registration fee? <span class="faq-icon">+</span></div>
+                <div class="faq-a"><p>Yes, there is a registration fee required to join, verify your ID, and get your first writing assignment. Please contact us on Telegram to ask about the exact fee amount.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Who can do this work? <span class="faq-icon">+</span></div>
+                <div class="faq-a"><p>Anyone! Students, housewives, or retired people. You do not need any past experience. You only need to have neat handwriting that is easy to read.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">When do I get my salary? <span class="faq-icon">+</span></div>
+                <div class="faq-a"><p>We pay salaries every week. After you submit your written pages, we check them within 24 to 48 hours, and then send the money straight to your bank account.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Is this a real company? <span class="faq-icon">+</span></div>
+                <div class="faq-a"><p>Yes, Vishv Publication is a genuine, MSME-approved, and MSME-registered company. We have been giving work and paying salaries since 2018.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>Vishv Publication</h3>
+                <p>Helping people earn real money from home through genuine handwriting projects since 2018.</p>
+                <div class="footer-badges">
+                    <span class="f-badge">🏛️ MSME Approved</span>
+                    <span class="f-badge">📜 MSME Registered</span>
+                    <span class="f-badge">✅ ISO 9001:2015</span>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Important Links</h3>
+                <a href="#guide">How to Start</a>
+                <a href="#pricing">Salary Plans</a>
+                <a href="#faq">Help & Questions</a>
+            </div>
+            <div class="footer-col">
+                <h3>Company Rules</h3>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Refund Policy</a>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p>📧 contact@Vishvpublication.com</p>
+                <p>📱 Support: Telegram Only</p>
+                <div style="margin-top: 10px;">
+                    <a href="https://t.me/+7gqm2hL2UnY0M2Fl" target="_blank" class="btn btn-telegram" onclick="fbq('track', 'Contact');" style="padding: 8px 16px; font-size: 0.8rem;">Join Telegram Channel</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2018 - 2026 Vishv Publication. All Rights Reserved.</p>
+            <p style="margin-top: 5px; opacity: 0.5;">Registered under Companies Act | GST Registered | PAN Verified Entity</p>
+        </div>
+    </footer>
+
+    <!-- Animated Sticky Bottom CTA -->
+    <div class="scroll-animated-cta">
+        <a href="https://t.me/+7gqm2hL2UnY0M2Fl" target="_blank" class="btn btn-telegram" onclick="fbq('track', 'Contact');">
+            👉 Join Our Telegram Channel Now
+        </a>
+    </div>
+
+    <script>
+        // 1. Mobile Menu Logic
+        const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuBtn.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuBtn.textContent = '☰';
+            });
+        });
+
+        // 2. Dynamic Payout Generator
+        const payoutTrack = document.getElementById('payoutTrack');
+        const firstNames = ['P***', 'R***', 'A***', 'S***', 'V***', 'M***', 'K***', 'N***', 'D***', 'T***', 'H***', 'J***'];
+        const lastInitials = ['S.', 'K.', 'P.', 'M.', 'D.', 'T.', 'R.', 'J.', 'L.', 'B.', 'G.', 'N.'];
+        const locations = ['Hyderabad', 'Chennai', 'Bangalore', 'Kochi', 'Trivandrum', 'Coimbatore', 'Mysore', 'Mumbai', 'Delhi', 'Pune'];
+        const amounts = ['₹12,000', '₹14,500', '₹16,800', '₹19,500', '₹22,000', '₹25,500', '₹29,000', '₹33,200', '₹37,500', '₹40,000'];
+        
+        let payoutHTML = '';
+        for(let i = 0; i < 40; i++) {
+            let fName = firstNames[Math.floor(Math.random() * firstNames.length)];
+            let lName = lastInitials[Math.floor(Math.random() * lastInitials.length)];
+            let loc = locations[Math.floor(Math.random() * locations.length)];
+            let amt = amounts[Math.floor(Math.random() * amounts.length)];
+            let initial = fName.charAt(0);
+            
+            let statusText = Math.random() > 0.3 ? 'Paid Today' : 'Paid Yesterday';
+            
+            payoutHTML += `
+                <div class="chart-row">
+                    <div class="user-info">
+                        <div class="user-icon">${initial}</div> 
+                        ${fName} ${lName} (${loc})
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="amt">${amt}</div>
+                        <div class="status">
+                            <span style="color: #10B981; margin-right:3px;">✓</span> ${statusText}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+        
+        payoutTrack.innerHTML = payoutHTML + payoutHTML;
+
+        // 3. FAQ Logic
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const btn = item.querySelector('.faq-q');
+            btn.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                faqItems.forEach(faq => {
+                    faq.classList.remove('active');
+                    faq.querySelector('.faq-icon').textContent = '+';
+                });
+                if (!isActive) {
+                    item.classList.add('active');
+                    item.querySelector('.faq-icon').textContent = '−';
+                }
+            });
+        });
+
+        // 4. Scroll Animations & Counters
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    
+                    const counters = entry.target.querySelectorAll('.counter');
+                    counters.forEach(counter => {
+                        if (!counter.hasAttribute('data-counted')) {
+                            counter.setAttribute('data-counted', 'true');
+                            const target = parseInt(counter.getAttribute('data-target'));
+                            const duration = 2000; 
+                            const increment = target / (duration / 16); 
+                            let current = 0;
+                            
+                            const updateCounter = () => {
+                                current += increment;
+                                if (current < target) {
+                                    counter.innerText = Math.floor(current).toLocaleString('en-IN');
+                                    requestAnimationFrame(updateCounter);
+                                } else {
+                                    counter.innerText = target.toLocaleString('en-IN') + (target > 100 ? '+' : '');
+                                }
+                            };
+                            updateCounter();
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
